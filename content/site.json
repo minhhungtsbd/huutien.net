@@ -27,20 +27,29 @@
   },
   "heroSlides": [
     {
-      "image": "/media/2026/03/1900x560_cua_nhom_huutien-2-1400x413-1.jpg",
-      "alt": "Cửa nhôm cao cấp Hữu Tiến - Quy Nhơn",
+      "mode": "hero",
+      "image": "/media/2026/03/cua_nhua.jpg",
+      "alt": "Cửa nhôm kính cao cấp Hữu Tiến - Quy Nhơn",
       "badge": "Xưởng sản xuất trực tiếp tại Quy Nhơn",
       "title": "Cửa Nhôm Kính & Cửa Cổng Sắt Cao Cấp",
-      "subtitle": "Chuyên nhôm Xingfa Rocket, Xingfa Taiwan, Hệ 140, Đông Á và gia công sắt mỹ thuật – bảo hành chu đáo.",
+      "subtitle": "Chuyên nhôm Xingfa Rocket, Xingfa Taiwan, Hệ 140, Đông Á và gia công sắt thép hộp mạ kẽm – bảo hành chu đáo.",
       "ctaText": "Yêu cầu báo giá",
       "ctaHref": "/yeu-cau-bao-gia/"
     },
     {
-      "image": "/media/2026/03/z2811889749921_1962a3ba9edf9e323cc93c499d126333.jpg",
-      "alt": "Hệ thanh nhôm định hình Xingfa tiêu chuẩn ISO 9001:2015",
-      "badge": "Tiêu chuẩn chất lượng ISO 9001:2015",
+      "mode": "banner",
+      "image": "/media/2026/03/1900x560_cua_nhom_huutien-2-1400x413-1.jpg",
+      "alt": "Cửa nhôm Hữu Tiến - Maxrock & Rocket tiêu chuẩn ISO 9001:2015",
+      "ctaText": "Xem mẫu cửa nhôm",
+      "ctaHref": "/mau-cua-nhom/"
+    },
+    {
+      "mode": "hero",
+      "image": "/media/2026/03/mat-dung-co-tuyet-1.jpeg",
+      "alt": "Vách kính, mặt dựng và công trình nhôm kính Hữu Tiến",
+      "badge": "Mr. Tiến trực tiếp tư vấn & giám sát thi công",
       "title": "Gia Công Sắc Sảo – Thi Công Đúng Tiến Độ",
-      "subtitle": "Mr. Tiến trực tiếp khảo sát, tư vấn giải pháp tối ưu chi phí và giám sát lắp đặt từng công trình nhà ở.",
+      "subtitle": "Khảo sát tận nơi tại Quy Nhơn – Bình Định, tư vấn giải pháp tối ưu chi phí cho nhà phố, biệt thự và nhà hàng.",
       "ctaText": "Xem công trình đã làm",
       "ctaHref": "/cong-trinh/"
     }

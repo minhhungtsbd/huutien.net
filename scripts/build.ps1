@@ -47,6 +47,15 @@ $productMenu = @(
     @{ title = "Nội thất Inox Nhôm"; href = "/noi-that-inox-nhom/" }
 )
 
+$ICO = @{
+    phone  = '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>'
+    mail   = '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>'
+    search = '<svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>'
+    menu   = '<svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>'
+    up     = '<svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>'
+    check  = '<svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>'
+}
+
 function Render-Layout {
     param(
         [string]$Title,
@@ -91,10 +100,11 @@ function Render-Layout {
 <body>
   <div class="topbar">
     <div class="container topbar-inner">
-      <div class="topbar-note">$(Esc $site.tagline) · $(Esc $site.topbarNote)</div>
+      <div class="topbar-note"><span class="topbar-dot"></span><span>$(Esc $site.tagline) · $(Esc $site.topbarNote)</span></div>
       <div class="topbar-links">
-        <a href="tel:$($site.contact.phoneHref)">📞 Hotline: $($site.contact.phoneDisplay)</a>
-        <a href="mailto:$($site.contact.email)">✉ $($site.contact.email)</a>
+        <a class="topbar-hotline" href="tel:$($site.contact.phoneHref)">$($ICO.phone)<span>Hotline: $($site.contact.phoneDisplay)</span></a>
+        <a class="topbar-email" href="mailto:$($site.contact.email)">$($ICO.mail)<span>$($site.contact.email)</span></a>
+        <a class="topbar-zalo-mobile" href="$($site.contact.zaloUrl)" target="_blank" rel="noopener">Chat Zalo →</a>
       </div>
     </div>
   </div>
@@ -123,9 +133,9 @@ function Render-Layout {
       </nav>
 
       <div class="header-actions">
-        <button class="icon-btn" type="button" data-open-search aria-label="Tìm kiếm">🔍</button>
+        <button class="icon-btn" type="button" data-open-search aria-label="Tìm kiếm">$($ICO.search)</button>
         <a class="btn btn-gold btn-sm" href="/yeu-cau-bao-gia/">Yêu cầu báo giá</a>
-        <button class="icon-btn menu-toggle" type="button" data-open-drawer aria-label="Mở menu">☰</button>
+        <button class="icon-btn menu-toggle" type="button" data-open-drawer aria-label="Mở menu">$($ICO.menu)</button>
       </div>
     </div>
   </header>
@@ -215,9 +225,9 @@ function Render-Layout {
   </footer>
 
   <div class="floating-bar" aria-label="Liên hệ nhanh">
-    <a class="fab fab-phone" href="tel:$($site.contact.phoneHref)" title="Gọi Mr. Tiến: $($site.contact.phoneDisplay)" aria-label="Gọi ngay">📞</a>
+    <a class="fab fab-phone" href="tel:$($site.contact.phoneHref)" title="Gọi Mr. Tiến: $($site.contact.phoneDisplay)" aria-label="Gọi ngay">$($ICO.phone)</a>
     <a class="fab fab-zalo" href="$($site.contact.zaloUrl)" target="_blank" rel="noopener" title="Nhắn Zalo Hữu Tiến" aria-label="Zalo">Zalo</a>
-    <button class="fab fab-top" id="fab-top" type="button" title="Lên đầu trang" aria-label="Lên đầu trang">↑</button>
+    <button class="fab fab-top" id="fab-top" type="button" title="Lên đầu trang" aria-label="Lên đầu trang">$($ICO.up)</button>
   </div>
 
   <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Tìm kiếm">
@@ -325,7 +335,16 @@ $slidesHtml = ""
 for ($i = 0; $i -lt $site.heroSlides.Count; $i++) {
     $sl = $site.heroSlides[$i]
     $act = if ($i -eq 0) { " active" } else { "" }
-    $slidesHtml += @"
+    if ($sl.mode -eq "banner") {
+        $slidesHtml += @"
+    <div class="hero-slide hero-slide--banner$act">
+      <a class="hero-banner-link" href="$($sl.ctaHref)" aria-label="$(Esc $sl.alt)">
+        <img class="hero-banner-img" src="$($sl.image)" alt="$(Esc $sl.alt)">
+      </a>
+    </div>
+"@
+    } else {
+        $slidesHtml += @"
     <div class="hero-slide$act">
       <img class="hero-bg" src="$($sl.image)" alt="$(Esc $sl.alt)">
       <div class="hero-overlay"></div>
@@ -336,12 +355,13 @@ for ($i = 0; $i -lt $site.heroSlides.Count; $i++) {
           <p>$(Esc $sl.subtitle)</p>
           <div class="hero-cta">
             <a class="btn btn-gold" href="$($sl.ctaHref)">$(Esc $sl.ctaText)</a>
-            <a class="btn btn-outline-white" href="tel:$($site.contact.phoneHref)">📞 Gọi $($site.contact.phoneDisplay)</a>
+            <a class="btn btn-outline-white" href="tel:$($site.contact.phoneHref)">$($ICO.phone) Gọi $($site.contact.phoneDisplay)</a>
           </div>
         </div>
       </div>
     </div>
 "@
+    }
 }
 $dotsHtml = ""
 for ($i = 0; $i -lt $site.heroSlides.Count; $i++) {
@@ -443,6 +463,15 @@ $homeBody = @"
   <button class="hero-arrow prev" type="button" data-hero-prev aria-label="Slide trước">‹</button>
   <button class="hero-arrow next" type="button" data-hero-next aria-label="Slide tiếp">›</button>
   <div class="hero-controls">$dotsHtml</div>
+</section>
+
+<section class="trust-strip" aria-label="Cam kết Hữu Tiến">
+  <div class="container trust-grid">
+    <div class="trust-item"><span class="trust-icon">$($ICO.check)</span><div><strong>Giá gốc tại xưởng</strong><span>Gia công trực tiếp tại Quy Nhơn</span></div></div>
+    <div class="trust-item"><span class="trust-icon">$($ICO.check)</span><div><strong>Chủ xưởng giám sát</strong><span>Mr. Tiến trực tiếp tư vấn &amp; đo đạc</span></div></div>
+    <div class="trust-item"><span class="trust-icon">$($ICO.check)</span><div><strong>Vật tư chính hãng</strong><span>Xingfa, Maxrock, Rocket, Inox</span></div></div>
+    <div class="trust-item"><span class="trust-icon">$($ICO.check)</span><div><strong>Bảo hành dài hạn</strong><span>Lắp đặt đúng hẹn, bảo trì tận tâm</span></div></div>
+  </div>
 </section>
 
 <section class="section">
