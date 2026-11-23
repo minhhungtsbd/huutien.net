@@ -764,6 +764,7 @@ foreach ($proj in $data.projects) {
 "@
     }) -join "`n"
 
+    $galClass = if ($proj.gallery.Count -eq 1) { "gallery-grid gallery-grid--single" } else { "gallery-grid" }
     $pBody = @"
 <section class="page-banner">
   <div class="container">
@@ -774,7 +775,7 @@ foreach ($proj in $data.projects) {
 <section class="section">
   <div class="container content-layout">
     <div class="article-body">
-      <div class="gallery-grid" style="margin-bottom:24px">$galHtml</div>
+      <div class="$galClass" style="margin-bottom:24px">$galHtml</div>
       $($proj.descriptionHtml)
       <div style="margin-top:26px;padding:18px;background:var(--brand-blue-soft);border-radius:12px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
         <div><strong>Bạn cần thi công hạng mục tương tự?</strong><br><span style="font-size:0.9rem;color:var(--ink-muted)">Gọi Mr. Tiến ($($site.contact.phoneDisplay)) để được khảo sát miễn phí.</span></div>
