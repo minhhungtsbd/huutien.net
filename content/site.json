@@ -1,0 +1,174 @@
+{
+  "siteName": "Cửa Cổng Nhôm Sắt Hữu Tiến - Quy Nhơn",
+  "shortName": "Nhôm Sắt Hữu Tiến",
+  "domain": "https://huutien.net",
+  "tagline": "Chúng tôi chuyên nghiệp trên lĩnh vực cửa cổng cho công trình nhà ở.",
+  "topbarNote": "Mr. Tiến – Chủ xưởng trực tiếp tư vấn và giám sát thi công",
+  "logo": "/media/2026/03/Logo-Huutien.jpg",
+  "favicon": "/media/2026/03/favicon.png",
+  "turnstileSiteKey": "0x4AAAAAABuzgKBePodDOu33",
+  "contact": {
+    "phoneDisplay": "0973 397 206",
+    "phoneHref": "0973397206",
+    "zaloUrl": "https://zalo.me/0973397206",
+    "email": "huutien9206@gmail.com",
+    "website": "huutien.net",
+    "addresses": [
+      {
+        "label": "Xưởng sản xuất 1",
+        "text": "Xã Nhơn Hội, TP. Quy Nhơn, Bình Định"
+      },
+      {
+        "label": "Cơ sở 2",
+        "text": "36 Phan Bá Vành, Phường Nhơn Bình, TP. Quy Nhơn, Bình Định"
+      }
+    ],
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.796036592377!2d109.19974371527428!3d13.7911657000946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x316f41c55b6a1ecb%3A0x94c91dd6dbf3bf11!2zQ-G7rWEgQ-G7lW5nIE5ow7RtIFPhuq90IEjhu691IFRp4bq_biAtIFF1eSBOaMahbg!5e0!3m2!1svi!2s!4v1632906355185!5m2!1svi!2s"
+  },
+  "heroSlides": [
+    {
+      "image": "/media/2026/03/1900x560_cua_nhom_huutien-2-1400x413-1.jpg",
+      "alt": "Cửa nhôm cao cấp Hữu Tiến - Quy Nhơn",
+      "badge": "Xưởng sản xuất trực tiếp tại Quy Nhơn",
+      "title": "Cửa Nhôm Kính & Cửa Cổng Sắt Cao Cấp",
+      "subtitle": "Chuyên nhôm Xingfa Rocket, Xingfa Taiwan, Hệ 140, Đông Á và gia công sắt mỹ thuật – bảo hành chu đáo.",
+      "ctaText": "Yêu cầu báo giá",
+      "ctaHref": "/yeu-cau-bao-gia/"
+    },
+    {
+      "image": "/media/2026/03/z2811889749921_1962a3ba9edf9e323cc93c499d126333.jpg",
+      "alt": "Hệ thanh nhôm định hình Xingfa tiêu chuẩn ISO 9001:2015",
+      "badge": "Tiêu chuẩn chất lượng ISO 9001:2015",
+      "title": "Gia Công Sắc Sảo – Thi Công Đúng Tiến Độ",
+      "subtitle": "Mr. Tiến trực tiếp khảo sát, tư vấn giải pháp tối ưu chi phí và giám sát lắp đặt từng công trình nhà ở.",
+      "ctaText": "Xem công trình đã làm",
+      "ctaHref": "/cong-trinh/"
+    }
+  ],
+  "featuredCategories": [
+    {
+      "title": "Nội Ngoại Thất Thép Hộp Mạ Kẽm",
+      "subtitle": "Cổng sắt, hàng rào, mái hiên bền đẹp",
+      "image": "/media/2026/03/65d651e90389cad79398-e1633192808193.jpg",
+      "href": "/noi-ngoai-that-thep-hop-ma-kem/"
+    },
+    {
+      "title": "Cửa Nhôm Cao Cấp",
+      "subtitle": "Xingfa Rocket, Taiwan, Hệ 140, Đông Á",
+      "image": "/media/2026/03/z2811889749921_1962a3ba9edf9e323cc93c499d126333.jpg",
+      "href": "/cua-nhom/"
+    },
+    {
+      "title": "Nội Thất Inox Nhôm",
+      "subtitle": "Tủ bếp, tủ quần áo, kệ nhôm inox",
+      "image": "/media/2026/03/20e694a817c0de9e87d1-280x280-1.jpg",
+      "href": "/noi-that-inox-nhom/"
+    }
+  ],
+  "quickCategories": [
+    { "title": "Mẫu Cửa Nhôm", "desc": "69+ mẫu cửa nhôm thực tế", "href": "/mau-cua-nhom/" },
+    { "title": "Cổng Hàng Rào", "desc": "55+ mẫu cổng sắt, hàng rào", "href": "/cong-hang-rao/" },
+    { "title": "Lan Can – Cầu Thang", "desc": "Thiết kế chắc chắn, thẩm mỹ", "href": "/cau-thang-lan-can/" },
+    { "title": "Sản Phẩm Kính", "desc": "Vách kính, bản lề sàn, mặt dựng", "href": "/vach-kinh/" },
+    { "title": "Khung Bảo Vệ", "desc": "An toàn, tinh tế cho mọi ô cửa", "href": "/khung-bao-ve/" },
+    { "title": "Nội Thất Inox Nhôm", "desc": "40+ mẫu tủ, kệ bền bỉ theo năm tháng", "href": "/noi-that-inox-nhom/" }
+  ],
+  "about": {
+    "eyebrow": "Về chúng tôi",
+    "title": "Xưởng sản xuất Nhôm Sắt Hữu Tiến",
+    "image": "/media/2026/03/nhom-thanh-rocket-luzwi2bx.jpg",
+    "secondaryImage": "/media/2026/03/z2807978477983_f7c3c598fe97d7300a245ab662c0b1e3.jpg",
+    "paragraphs": [
+      "Xưởng sản xuất Nhôm Sắt Hữu Tiến – Quy Nhơn là đơn vị trực tiếp gia công và lắp đặt các hạng mục cửa cổng, nhôm kính, sắt thép và nội ngoại thất cho công trình nhà ở, biệt thự, nhà hàng tại Bình Định.",
+      "Chúng tôi chuyên cung cấp và thi công đa dạng các dòng sản phẩm chính hãng: Nhôm Xingfa Rocket, Nhôm Xingfa Taiwan, Hệ 140, Nhôm Đông Á hệ 700–1000, cửa cổng thép hộp mạ kẽm, khung bảo vệ, cầu thang lan can và tủ nhôm inox cao cấp."
+    ],
+    "highlights": [
+      "Chủ xưởng trực tiếp tư vấn, khảo sát và giám sát thi công",
+      "Giá gốc tại xưởng – minh bạch vật tư và phụ kiện chính hãng",
+      "Gia công sắc sảo, lắp đặt gọn gàng, đúng tiến độ cam kết",
+      "Chế độ bảo hành, bảo trì tận tâm dài lâu"
+    ]
+  },
+  "process": [
+    {
+      "step": "01",
+      "title": "Tư vấn & Khảo sát",
+      "desc": "Tiếp nhận yêu cầu, khảo sát thực tế công trình và tư vấn vật liệu phù hợp ngân sách.",
+      "icon": "/media/2026/03/1-tuvan-2.png"
+    },
+    {
+      "step": "02",
+      "title": "Thiết kế & Báo giá",
+      "desc": "Đo đạc chi tiết kích thước, lên phương án thiết kế và gửi báo giá rõ ràng từng hạng mục.",
+      "icon": "/media/2026/03/2-thietke-1.png"
+    },
+    {
+      "step": "03",
+      "title": "Thi công lắp đặt",
+      "desc": "Gia công trực tiếp tại xưởng với độ chính xác cao và lắp đặt hoàn thiện đúng tiến độ.",
+      "icon": "/media/2026/03/3-thiconglatdat-1.png"
+    },
+    {
+      "step": "04",
+      "title": "Thanh toán & Bảo trì",
+      "desc": "Nghiệm thu cùng khách hàng, bàn giao công trình và đồng hành bảo hành – bảo trì chu đáo.",
+      "icon": "/media/2026/03/4-thanhtoanbaotri-1.png"
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Hoan Phạm Ngọc",
+      "date": "23/01/2025",
+      "rating": 5,
+      "text": "Chuyên nghiệp. Chăm sóc khách hàng tốt!"
+    },
+    {
+      "author": "Sen Nguyễn",
+      "date": "28/03/2025",
+      "rating": 5,
+      "text": "Sản phẩm đẹp. Ông chủ nhiệt tình tốt bụng. Mọi người nên làm nhà."
+    },
+    {
+      "author": "Quang Hồ",
+      "date": "14/03/2025",
+      "rating": 5,
+      "text": "Chất lượng rất tốt."
+    },
+    {
+      "author": "Chi Nguyen",
+      "date": "06/03/2025",
+      "rating": 5,
+      "text": "Sản phẩm tỉ mỉ, gia công đạt tiến độ."
+    },
+    {
+      "author": "Tú Hảo Nguyễn",
+      "date": "26/03/2024",
+      "rating": 5,
+      "text": "Thi công nhanh, giá cả phải chăng, chủ xưởng hỗ trợ rất nhiệt tình và dễ thương."
+    },
+    {
+      "author": "Susu Su xị",
+      "date": "22/01/2024",
+      "rating": 5,
+      "text": "Hữu Tiến đơn vị thi công rất ok và chất lượng."
+    },
+    {
+      "author": "Thang Le",
+      "date": "22/01/2024",
+      "rating": 5,
+      "text": "Uy tín, sắc sảo, good!"
+    },
+    {
+      "author": "hoàng ân 753",
+      "date": "10/11/2023",
+      "rating": 5,
+      "text": "Nhà mình vừa xả dàn sắt vừa làm dàn nhôm mới, anh Tiến chủ cơ sở hỗ trợ rất tuyệt vời, làm việc nhanh gọn, đúng hẹn."
+    },
+    {
+      "author": "Sevendays",
+      "date": "20/09/2023",
+      "rating": 5,
+      "text": "Ông chủ nhiệt tình, sản phẩm đẹp chất lượng."
+    }
+  ]
+}

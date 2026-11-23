@@ -1,0 +1,7 @@
+dist/
+content/raw/
+node_modules/
+.dev.vars
+.wrangler/
+.DS_Store
+Thumbs.db
