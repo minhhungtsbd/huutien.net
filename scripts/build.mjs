@@ -477,7 +477,7 @@ for (const proj of data.projects) {
 }
 
 // 4. Regular & Gallery pages
-const specialSlugs = new Set(["lien-he", "yeu-cau-bao-gia", "cong-trinh"]);
+const specialSlugs = new Set(["lien-he", "yeu-cau-bao-gia", "cong-trinh", "dich-vu"]);
 for (const pg of data.pages) {
   if (specialSlugs.has(pg.slug)) continue;
   const innerHtml = pg.isGallery
@@ -489,19 +489,21 @@ for (const pg of data.pages) {
   searchIndex.push({ title: pg.title, route: pg.route, type: "Sản phẩm / Trang", excerpt: pg.excerpt });
 }
 
-// 5. Blog archives & single posts
+// 5. Blog archives (/category/tin-tuc/, /category/dich-vu/, /dich-vu/) & single posts
 for (const bc of [
-  { slug: "tin-tuc", name: "Tin tức & Kiến thức", route: "/category/tin-tuc/" },
-  { slug: "dich-vu", name: "Dịch vụ", route: "/category/dich-vu/" },
+  { slug: "tin-tuc", name: "Tin tức & Kiến thức", route: "/category/tin-tuc/", subtitle: "Cập nhật kiến thức chọn cửa nhôm, thước lỗ ban và tin tức từ Hữu Tiến" },
+  { slug: "dich-vu", name: "Dịch vụ", route: "/category/dich-vu/", subtitle: "Tư vấn, gia công, lắp đặt nghiệm thu, cam kết chất lượng và bảo hành – bảo trì" },
+  { slug: "dich-vu", name: "Dịch vụ", route: "/dich-vu/", subtitle: "Tư vấn, gia công, lắp đặt nghiệm thu, cam kết chất lượng và bảo hành – bảo trì" },
 ]) {
   const catPosts = data.posts.filter((p) => p.categorySlug === bc.slug);
   const cardsHtml = catPosts
     .map((p) => `<article class="post-card"><a class="post-card-img" href="${p.route}"><img src="${p.featuredImage}" alt="${esc(p.title)}" loading="lazy"></a><div class="post-card-body"><div class="news-meta">${p.date} · ${esc(p.categoryName)}</div><h3><a href="${p.route}">${esc(p.title)}</a></h3><p>${esc(p.excerpt)}</p></div></article>`)
     .join("\n");
-  const catBody = `<section class="page-banner"><div class="container"><div class="breadcrumbs"><a href="/">Trang chủ</a> <span>/</span> <span>${esc(bc.name)}</span></div><h1>${esc(bc.name)}</h1><div class="page-meta">${catPosts.length} bài viết</div></div></section><section class="section"><div class="container"><div class="posts-grid">${cardsHtml}</div></div></section>`;
+  const catBody = `<section class="page-banner"><div class="container"><div class="breadcrumbs"><a href="/">Trang chủ</a> <span>/</span> <span>${esc(bc.name)}</span></div><h1>${esc(bc.name)}</h1><div class="page-meta">${esc(bc.subtitle)} (${catPosts.length} bài viết)</div></div></section><section class="section"><div class="container"><div class="posts-grid">${cardsHtml}</div></div></section>`;
   writeRoute(bc.route, renderLayout({ title: bc.name, description: `${bc.name} tại Nhôm Sắt Hữu Tiến Quy Nhơn.`, route: bc.route, bodyHtml: catBody }));
   allRoutes.push(bc.route);
 }
+searchIndex.push({ title: "Dịch vụ", route: "/dich-vu/", type: "Dịch vụ", excerpt: "Tư vấn dịch vụ, lắp đặt nghiệm thu, cam kết chất lượng và bảo hành bảo trì." });
 
 for (const post of data.posts) {
   const related = data.posts.filter((p) => p.slug !== post.slug && p.categorySlug === post.categorySlug).slice(0, 3);

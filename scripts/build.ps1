@@ -798,7 +798,7 @@ foreach ($proj in $data.projects) {
 # 3. REGULAR & GALLERY PAGES
 # ==========================================================================
 Write-Host "Building regular and gallery pages..."
-$specialSlugs = @("lien-he", "yeu-cau-bao-gia", "cong-trinh")
+$specialSlugs = @("lien-he", "yeu-cau-bao-gia", "cong-trinh", "dich-vu")
 foreach ($pg in $data.pages) {
     if ($specialSlugs -contains $pg.slug) { continue }
 
@@ -837,12 +837,13 @@ foreach ($pg in $data.pages) {
 }
 
 # ==========================================================================
-# 4. BLOG CATEGORY ARCHIVES & SINGLE POSTS
+# 4. BLOG CATEGORY ARCHIVES (/category/tin-tuc/, /category/dich-vu/, /dich-vu/) & SINGLE POSTS
 # ==========================================================================
 Write-Host "Building blog categories and posts..."
 $blogCats = @(
-    @{ slug = "tin-tuc"; name = "Tin tức & Kiến thức"; route = "/category/tin-tuc/" },
-    @{ slug = "dich-vu"; name = "Dịch vụ"; route = "/category/dich-vu/" }
+    @{ slug = "tin-tuc"; name = "Tin tức & Kiến thức"; route = "/category/tin-tuc/"; subtitle = "Cập nhật kiến thức chọn cửa nhôm, thước lỗ ban và tin tức từ Hữu Tiến" },
+    @{ slug = "dich-vu"; name = "Dịch vụ"; route = "/category/dich-vu/"; subtitle = "Tư vấn, gia công, lắp đặt nghiệm thu, cam kết chất lượng và bảo hành – bảo trì" },
+    @{ slug = "dich-vu"; name = "Dịch vụ"; route = "/dich-vu/"; subtitle = "Tư vấn, gia công, lắp đặt nghiệm thu, cam kết chất lượng và bảo hành – bảo trì" }
 )
 
 foreach ($bc in $blogCats) {
@@ -867,7 +868,7 @@ foreach ($bc in $blogCats) {
   <div class="container">
     <div class="breadcrumbs"><a href="/">Trang chủ</a> <span>/</span> <span>$(Esc $bc.name)</span></div>
     <h1>$(Esc $bc.name)</h1>
-    <div class="page-meta">$($catPosts.Count) bài viết</div>
+    <div class="page-meta">$(Esc $bc.subtitle) ($($catPosts.Count) bài viết)</div>
   </div>
 </section>
 <section class="section">
@@ -879,6 +880,7 @@ foreach ($bc in $blogCats) {
     Write-RouteHtml $bc.route (Render-Layout -Title $bc.name -Description "$($bc.name) tại Nhôm Sắt Hữu Tiến Quy Nhơn." -Route $bc.route -BodyHtml $catBody)
     [void]$allRoutes.Add($bc.route)
 }
+[void]$searchIndex.Add(@{ title = "Dịch vụ"; route = "/dich-vu/"; type = "Dịch vụ"; excerpt = "Tư vấn dịch vụ, lắp đặt nghiệm thu, cam kết chất lượng và bảo hành bảo trì." })
 
 foreach ($post in $data.posts) {
     $relatedPosts = @($data.posts | Where-Object { $_.slug -ne $post.slug -and $_.categorySlug -eq $post.categorySlug } | Select-Object -First 3)

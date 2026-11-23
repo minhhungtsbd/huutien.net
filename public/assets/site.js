@@ -190,7 +190,20 @@
     if (e.key === "ArrowRight") { galleryIdx++; updateLightbox(); }
   });
 
-  // 6. Scroll to top button
+  // 6. FAQ Accordion toggle
+  document.querySelectorAll(".accordion-title").forEach((trigger) => {
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      const item = trigger.closest(".accordion-item");
+      const panel = item?.querySelector(".accordion-inner");
+      if (!panel) return;
+      const isOpen = trigger.classList.toggle("active");
+      trigger.setAttribute("aria-expanded", String(isOpen));
+      panel.style.display = isOpen ? "block" : "none";
+    });
+  });
+
+  // 7. Scroll to top button
   const topBtn = document.getElementById("fab-top");
   if (topBtn) {
     window.addEventListener("scroll", () => {

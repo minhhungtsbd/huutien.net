@@ -919,6 +919,48 @@ h1, h2, h3, h4 { margin: 0 0 0.6em; line-height: 1.28; font-weight: 700; color: 
 .article-body table { width: 100%; border-collapse: collapse; margin: 18px 0; }
 .article-body th, .article-body td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; }
 
+/* Clean compatibility for legacy Flatsome content blocks inside articles */
+.article-body .section { padding: 0; background: transparent; }
+.article-body .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.article-body .image-cover { padding-top: 0 !important; }
+.article-body .image-cover:empty,
+.article-body .img:has(.image-cover:empty) { display: none; }
+.article-body .is-divider { margin: 10px 0 18px !important; }
+.article-body .accordion { display: grid; gap: 12px; }
+.article-body .accordion-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #fff;
+}
+.article-body .accordion-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  font-weight: 600;
+  color: var(--brand-blue-dark);
+  background: var(--bg-soft);
+  cursor: pointer;
+}
+.article-body .accordion-title .toggle {
+  border: none;
+  background: transparent;
+  color: var(--brand-blue);
+  font-size: 1rem;
+  padding: 0;
+  cursor: pointer;
+}
+.article-body .accordion-title .toggle::before { content: "▾"; display: inline-block; transition: transform 0.2s ease; }
+.article-body .accordion-title:not(.active) .toggle::before { transform: rotate(-90deg); }
+.article-body .accordion-inner { padding: 14px 18px; border-top: 1px solid var(--border); }
+.article-body .accordion-inner p:last-child { margin-bottom: 0; }
+
 .sidebar { display: flex; flex-direction: column; gap: 22px; }
 .widget {
   background: #fff;
